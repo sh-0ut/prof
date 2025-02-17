@@ -1,0 +1,19 @@
+{
+  "skills": [
+    {
+      "name": "React",
+      "category": "Frontend",
+      "projects": ["Проєкт 1", "Проєкт 3"]
+    },
+    {
+      "name": "TypeScript",
+      "category": "Frontend",
+      "projects": ["Проєкт 2", "Проєкт 4"]
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "projects": ["Проєкт 3", "Проєкт 5"]
+    }
+  ]
+} 

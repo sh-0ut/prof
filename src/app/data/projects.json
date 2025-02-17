@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "title": "Проєкт 1",
+      "description": "Сучасний веб-додаток для управління завданнями",
+      "stack": ["React", "TypeScript", "Tailwind CSS"],
+      "github": "https://github.com/username/project1"
+    },
+    {
+      "title": "Проєкт 2",
+      "description": "API сервіс для аналізу даних",
+      "stack": ["Node.js", "Express", "MongoDB"],
+      "github": "https://github.com/username/project2"
+    }
+  ]
+} 

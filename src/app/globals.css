@@ -14,8 +14,33 @@
   }
 }
 
+/* Глобальні стилі */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply min-h-screen bg-background text-foreground antialiased;
+}
+
+/* Кастомні базові стилі */
+@layer base {
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+  h2 {
+    @apply text-2xl font-semibold mb-3;
+  }
+  h3 {
+    @apply text-xl font-medium mb-2;
+  }
+  p {
+    @apply text-lg text-gray-600 mb-4;
+  }
+}
+
+/* Кастомні компоненти */
+@layer components {
+  .container {
+    @apply max-w-4xl mx-auto p-6;
+  }
+  .nav-link {
+    @apply px-4 py-2 rounded transition-colors duration-200;
+  }
 }

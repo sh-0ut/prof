@@ -1,37 +1,59 @@
+"use client";
+import { motion } from 'framer-motion';
+import ProjectCard from '@/components/ProjectCard';
 import projectsData from '@/app/data/projects.json';
+import Link from "next/link";
 
 export default function ProjectsPage() {
   return (
-    <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-4xl font-bold mb-8">Мої проєкти</h1>
-      <div className="grid gap-6">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="max-w-6xl mx-auto p-6 min-h-screen"
+    >
+      <motion.h1
+        initial={{ x: -250, opacity: 0 }}
+        animate={{ x: 0, opacity: 1}}
+        transition={{ type: "spring", stiffness: 50}}
+        className="text-4xl font-bold mb-8 text-foreground"
+      >
+        Мої проєкти
+      </motion.h1>
+
+      <motion.a
+        href="/"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.5 }}
+        className="inline-block mb-8 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+      >
+        ← Повернутись на головну
+      </motion.a>
+
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { 
+            opacity: 1,
+            transition: { staggerChildren: 0.1 } 
+          }
+        }}
+      >
         {projectsData.projects.map((project, index) => (
-          <div key={index} className="border p-4 rounded-lg hover:bg-gray-50 transition-colors">
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold">{project.title}</h3>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm px-3 py-1 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
-              >
-                GitHub →
-              </a>
-            </div>
-            <p className="text-gray-600 mb-3">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
-              {project.stack.map((tech, tIndex) => (
-                <span 
-                  key={tIndex}
-                  className="px-2 py-1 text-sm bg-blue-100 text-blue-800 rounded-full"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+          <ProjectCard
+            key={project.title}
+            title={project.title}
+            description={project.description}
+            stack={project.stack}
+            github={project.github}
+            // index={index}
+          />
         ))}
-      </div>
-    </main>
+      </motion.div>
+    </motion.main>
   );
 } 

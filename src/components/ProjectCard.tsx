@@ -47,7 +47,7 @@ export const ProjectCard = ({
       }}
       whileTap={{ scale: 0.98 }}
       viewport={{ once: true, margin: "0px 0px -100px 0px" }}
-      className="group relative h-full border p-6 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-200"
+      className="group relative h-full border p-6 rounded-lg bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-200"
     >
       <div className="flex flex-col h-full justify-between">
         <div>

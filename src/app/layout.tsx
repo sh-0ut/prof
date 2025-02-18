@@ -5,6 +5,8 @@ import "./globals.css";
 import ProjectCard from "../components/ProjectCard";
 import { AnimatePresence, motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import { ThemeProvider } from 'next-themes';
+import Navbar from '../components/Navbar';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,22 +43,23 @@ export default function RootLayout({
   const pathname = usePathname();
 
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="absolute w-full"
-          >
-            {children}
-          </motion.div>
-        </AnimatePresence>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={pathname}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              className="absolute w-full"
+            >
+              {children}
+            </motion.div>
+          </AnimatePresence>
+          {/* <Navbar /> */}
+        </ThemeProvider>
       </body>
     </html>
   );

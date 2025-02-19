@@ -11,6 +11,12 @@
       "description": "API сервіс для аналізу даних",
       "stack": ["Node.js", "Express", "MongoDB"],
       "github": "https://github.com/username/project2"
+    },
+    {
+      "title": "Проєкт 3",
+      "description": "API сервіс для аналізу даних",
+      "stack": ["Node.js", "Express", "MongoDB"],
+      "github": "https://github.com/username/project3"
     }
   ]
 } 

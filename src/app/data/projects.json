@@ -16,31 +16,7 @@
       "title": "Проєкт 3",
       "description": "API сервіс для аналізу даних",
       "stack": ["Node.js", "Express", "MongoDB"],
-      "github": "https://github.com/username/project2"
-    },
-    {
-      "title": "Проєкт 4",
-      "description": "API сервіс для аналізу даних",
-      "stack": ["Node.js", "Express", "MongoDB"],
-      "github": "https://github.com/username/project2"
-    },
-    {
-      "title": "Проєкт 5",
-      "description": "Сучасний веб-додаток для управління завданнями",
-      "stack": ["React", "TypeScript", "Tailwind CSS"],
-      "github": "https://github.com/username/project1"
-    },
-    {
-      "title": "Проєкт 6",
-      "description": "API сервіс для аналізу даних",
-      "stack": ["Node.js", "Express", "MongoDB"],
-      "github": "https://github.com/username/project2"
-    },
-    {
-      "title": "Проєкт 7",
-      "description": "API сервіс для аналізу даних",
-      "stack": ["Node.js", "Express", "MongoDB"],
-      "github": "https://github.com/username/project2"
+      "github": "https://github.com/username/project3"
     }
   ]
 } 

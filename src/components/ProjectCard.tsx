@@ -8,6 +8,8 @@ type ProjectCardProps = {
   github: string;
   index: number;
   onClick: () => void;
+} & {
+  onHover?: (isHovered: boolean) => void; 
 };
 
 const GitHubIcon = ({ className }: { className?: string }) => (
@@ -28,7 +30,8 @@ export const ProjectCard = ({
   stack,
   github,
   index,
-  onClick
+  onClick,
+  onHover
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -51,6 +54,8 @@ export const ProjectCard = ({
       viewport={{ once: true, margin: "0px 0px -100px 0px" }}
       onClick={onClick}
       className="group relative h-full border p-6 rounded-lg bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow duration-200 cursor-pointer"
+      onMouseEnter={() => onHover?.(true)} // handler
+      onMouseLeave={() => onHover?.(false)} // handler
     >
       <div className="flex flex-col h-full justify-between">
         <div>

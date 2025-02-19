@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="container">
       <header className="mb-12">
-        <h1>Вітаю на моєму портфоліо</h1>
+        <h1>Вітаю</h1>
         <nav className="flex gap-4 flex-wrap items-center">
           <a href="/skills" className="nav-link bg-blue-500 text-white hover:bg-blue-600">
             Навички
@@ -20,9 +20,9 @@ export default function Home() {
       </header>
       
       <section>
-        <h2>Про мене</h2>
+        <h2>About</h2>
         <p>
-          Я розробник з досвідом створення сучасних веб-додатків. 
+          Pозробник з досвідом створення сучасних веб-додатків. 
           Спеціалізуюсь на екосистемі JavaScript.
         </p>
       </section>
